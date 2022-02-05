@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+
+class Category(models.Model):
+    """
+    name: str - required
+    description: str
+    """
+    name = models.CharField(max_length=200, null=False)
+    description = models.CharField(max_length=10000, null=True)
